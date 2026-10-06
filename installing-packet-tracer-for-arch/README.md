@@ -47,3 +47,7 @@ sudo apt update
 
 Refreshes Ubuntu's package lists so `apt` knows about the latest available versions before anything gets installed.
 
+### 5. Download Packet Tracer
+
+Downloaded the Linux installer (`.deb`) from the Cisco NetAcad site ([netacad.com](https://www.netacad.com)) — you need a (free) NetAcad account to grab it.
+
