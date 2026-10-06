@@ -25,3 +25,17 @@ Essentially this builds a disposable Ubuntu container called `cisco-env` that Pa
 - `--name cisco-env` — gives the container the name `cisco-env`
 - `-Y` — answers "yes" to every prompt so it runs without waiting on you
 
+### 3. Enter the container
+
+```bash
+distrobox enter --root cisco-env
+```
+
+Drops you into a shell inside the `cisco-env` container. Everything from here on runs in Ubuntu, not Arch:
+
+- `distrobox enter` — opens a shell inside an existing distrobox container
+- `--root` — enters as root (same as how the container was created)
+- `cisco-env` — the container to enter
+
+Your home directory is shared with Arch, so files stay visible from both sides.
+
