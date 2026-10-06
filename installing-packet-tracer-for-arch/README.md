@@ -63,3 +63,16 @@ sudo apt install ./CiscoPacketTracer.deb
 - `./` tells apt the file is right here in the current folder, not something to search for online
 - `apt install` (rather than `dpkg`) automatically pulls in any dependencies Packet Tracer needs
 
+### 7. Export the app to the host
+
+```bash
+distrobox-export --app packetracer
+```
+
+Registers Packet Tracer with your Arch application launcher so you can open it like any native app:
+
+- `distrobox-export` — copies an app out of the container for the host to use
+- `--app packetracer` — the app/command to export
+
+This drops a `.desktop` launcher on the host that silently starts the app inside `cisco-env` for you.
+
