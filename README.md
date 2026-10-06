@@ -19,3 +19,5 @@ Spins up an Ubuntu container named `cisco-env`:
 distrobox create --image ubuntu:latest --name cisco-env
 ```
 
+As originally written in my notes: `distrobox create --image ubuntu: latest --name cisco-env`
+
