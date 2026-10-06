@@ -51,3 +51,15 @@ Refreshes Ubuntu's package lists so `apt` knows about the latest available versi
 
 Downloaded the Linux installer (`.deb`) from the Cisco NetAcad site ([netacad.com](https://www.netacad.com)) — you need a (free) NetAcad account to grab it.
 
+### 6. Install Packet Tracer inside the container
+
+Inside `cisco-env`, navigated to wherever the installer was saved (mine was in `/mnt/app`):
+
+```bash
+cd /mnt/app
+sudo apt install ./CiscoPacketTracer.deb
+```
+
+- `./` tells apt the file is right here in the current folder, not something to search for online
+- `apt install` (rather than `dpkg`) automatically pulls in any dependencies Packet Tracer needs
+
