@@ -39,3 +39,11 @@ Drops you into a shell inside the `cisco-env` container. Everything from here on
 
 Your home directory is shared with Arch, so files stay visible from both sides.
 
+### 4. Update Ubuntu
+
+```bash
+sudo apt update
+```
+
+Refreshes Ubuntu's package lists so `apt` knows about the latest available versions before anything gets installed.
+
