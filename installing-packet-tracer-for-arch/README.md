@@ -13,11 +13,15 @@ sudo systemctl enable --now docker
 
 ### 2. Create the container environment
 
-Spins up an Ubuntu container named `cisco-env`:
-
 ```bash
-distrobox create --image ubuntu:latest --name cisco-env
+distrobox-create --root --image docker.io/library/ubuntu:latest --name cisco-env -Y
 ```
 
-As originally written in my notes: `distrobox create --image ubuntu: latest --name cisco-env`
+Essentially this builds a disposable Ubuntu container called `cisco-env` that Packet Tracer will be installed into:
+
+- `distrobox-create` — creates the container and wires it to your existing Arch system
+- `--root` — runs the container as root (rootful) instead of rootless
+- `--image docker.io/library/ubuntu:latest` — pulls the latest official Ubuntu image from Docker Hub
+- `--name cisco-env` — gives the container the name `cisco-env`
+- `-Y` — answers "yes" to every prompt so it runs without waiting on you
 
